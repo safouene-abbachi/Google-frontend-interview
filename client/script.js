@@ -74,7 +74,19 @@ async function drawHtmlElements() {
       const questionContainer = document.createElement('div');
       questionContainer.classList.add('question');
       const questionTitle = document.createElement('h3');
+      const questionStatus = document.createElement('div');
+      questionStatus.classList.add('status');
+      questionStatus.style.backgroundColor =
+        element.status === 'CORRECT'
+          ? 'green'
+          : element.status === 'PARTIALLY_CORRECT'
+          ? 'orange'
+          : element.status === 'Not Submitted'
+          ? null
+          : 'red';
+
       questionTitle.innerText = element.name;
+      questionContainer.appendChild(questionStatus);
       questionContainer.appendChild(questionTitle);
       categoryContainer.appendChild(questionContainer);
     });

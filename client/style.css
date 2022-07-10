@@ -1,3 +1,19 @@
-.container{
+#container{
     display: flex;
+}
+
+.category{
+    margin: 5rem;
+}
+.question{
+    border: 1px solid #7cfc00;
+    display: flex;
+}
+.status{
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 13px;
+    height: 12px;
+    margin-top: 20%;
+    margin-right: 10px;
 }
